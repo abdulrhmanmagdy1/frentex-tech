@@ -1,8 +1,8 @@
 const menu=document.querySelector('.menu-toggle');
 const navigation=document.querySelector('#navigation');
 menu?.addEventListener('click',()=>{const opened=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!opened));menu.setAttribute('aria-label',opened?'فتح القائمة':'إغلاق القائمة');navigation.classList.toggle('open',!opened)});
-navigation?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');menu?.setAttribute('aria-expanded','false')}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){navigation?.classList.remove('open');menu?.setAttribute('aria-expanded','false')}});
+navigation?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','فتح القائمة')}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){navigation?.classList.remove('open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','فتح القائمة')}});
 const filters=document.querySelectorAll('[data-filter]');
 filters.forEach(button=>button.addEventListener('click',()=>{filters.forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button))});let n=0;document.querySelectorAll('[data-category]').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&card.dataset.category!==button.dataset.filter;if(!card.hidden)n++});document.querySelector('#filter-status').textContent=n===3?'٣ نماذج تفاعلية':'نموذج تفاعلي واحد'}));
 const briefDialog=document.querySelector('#brief-dialog');
