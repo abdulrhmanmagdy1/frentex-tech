@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abdulrhmanmagdy1.github.io/frentex-tech/sitemap.xml
