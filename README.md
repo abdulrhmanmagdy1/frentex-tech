@@ -5,7 +5,7 @@ Arabic B2B software company website. Static HTML/CSS/JavaScript.
 python3 -m http.server 8765
 
 ## Deploy
-GitHub Pages: main branch, root directory. Public site: https://abdulrhmanmagdy1.github.io/frentex-tech/
+GitHub Pages: main branch, root directory. Public site: https://frentex-tech.github.io/frentex-tech/
 
 ## Content
 Six solution pages, delivery process, about, contact, privacy, interactive demonstration lab and PDF profile.
